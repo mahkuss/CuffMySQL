@@ -1,0 +1,70 @@
+h2 {
+	font-family: Arial;
+	text-align: center;
+}
+
+h3 {
+	font-family: Arial;
+	text-align: center;
+	padding-left: 20px;
+}
+
+ul {
+	display: block;
+	text-align: left;
+	font-family: Arial;
+}
+
+ul li {
+	text-align: left;
+}
+
+table {
+	border: 2px solid black;
+	border-style: double;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 10;
+	font-family: Arial;
+}
+
+td, th {
+	border: 1px solid black;
+	padding: 5px;
+}
+
+form {
+	text-align: center;
+}
+
+textarea {
+	padding-left: 5px;
+}
+
+.divFull {
+
+}
+
+.divTop {
+	align: top;
+	height: 10%;
+	border-bottom: 2px solid black;
+}
+
+.divLeft {
+	width: 20%;
+	float: left;
+	padding-top: 30px;
+	background-color: #6666FF;
+	border: 2px solid black;
+}
+
+.divRight {
+	width: 78%;
+	float: right;
+}
+
+.leftHeader {
+	text-align: left;
+	font-family: Arial;
+}
