@@ -40,7 +40,7 @@ class Cuffdata:
 		try:
 			cursor.execute( "CREATE TABLE %s "\
 				"( test_id CHAR(18), gene_id CHAR(18), gene VARCHAR(14), "\
-				"chrom VARCHAR(2), start_coord INT UNSIGNED, end_coord INT UNSIGNED, "\
+				"chrom VARCHAR(10), start_coord INT UNSIGNED, end_coord INT UNSIGNED, "\
 				"sample_1 VARCHAR(10), sample_2 VARCHAR(10), status VARCHAR(7), "\
 				"value_1 DOUBLE, value_2 DOUBLE, log2 DOUBLE, "\
 				"test_stat DOUBLE, p_value DOUBLE, q_value DOUBLE, significant VARCHAR(3) )" %(table) )
@@ -122,7 +122,7 @@ class Cuffdata:
 			cursor.execute( "CREATE TABLE %s "\
 				"( tracking_id CHAR(18), class_code CHAR(1), nearest_ref_id CHAR(18), "\
 				"gene_id CHAR(18), gene_short_name VARCHAR(14), tss_id VARCHAR(60), "\
-				"chrom CHAR(3), start_coord INT UNSIGNED, end_coord INT UNSIGNED, "\
+				"chrom VARCHAR(10), start_coord INT UNSIGNED, end_coord INT UNSIGNED, "\
 				"length DOUBLE, coverage DOUBLE )" %( table ) )
 
 		except MySQLdb.Error, e:
