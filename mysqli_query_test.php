@@ -1,6 +1,22 @@
 <html>
 	<head>
 		<link type='text/css' rel='stylesheet' href='db_interface.css'/>
+		<script type='text/javascript' src='jquery-1.11.1.js'></script>
+		<script type='text/javascript' src='jquery.tablesorter.min.js'></script>
+		<script type='text/javascript'>
+						$(document).ready(function() {
+     							$("#sortedtable").tablesorter({ sortlist: [0,0] });
+						});
+		</script>
+		<style type="text/css">
+                        #sortedtable thead th {
+                                color: #00f;
+                                font-weight: bold;
+                                text-decoration: underline;
+                        }
+                </style>
+
+
 		<title>Database Interface Test</title>
 	</head>
 
@@ -10,7 +26,7 @@
 			<h2 align="center">MySQL Interface Testing</h2>
 		</div>
 
-		<div class="divLeft" >
+		<div class="divLeft">
 			<?php
 			$db = new mysqli("localhost", "test", "thisisnotatest", "testdb");
 			//echo $db->connect_errno;
@@ -84,20 +100,20 @@
 		}
 
 		else {
-			echo "<table>";
-			echo "<tr>";
+			echo "<table id='sortedtable'>\n";
+			echo "<thead>\n<tr>";
 			$colnames = $result->fetch_fields();
 			foreach( $colnames as $col ) {
 					echo "<th>" . $col->name . "</th>";
 				}
-			echo "</tr>";
+			echo "</tr>\n</thead>\n";
 	
 			while ( $row = $result->fetch_assoc() ) {
 				echo "<tr>";
 				foreach( $row as $key=> $value ) {
 					echo "<td>" . $value . "</td>"; 
 					}
-				echo "</tr>";
+				echo "</tr>\n";
 			}
 			echo "</table>";
 		}
