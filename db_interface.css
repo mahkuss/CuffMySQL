@@ -41,6 +41,13 @@ textarea {
 	padding-left: 5px;
 }
 
+#sortedtable thead th {
+    color: #FFFFCC;
+    background-color: #3333CC;
+    font-weight: bold;
+    text-decoration: none;
+}
+
 .divFull {
 
 }

@@ -8,13 +8,6 @@
      							$("#sortedtable").tablesorter({ sortlist: [0,0] });
 						});
 		</script>
-		<style type="text/css">
-                        #sortedtable thead th {
-                                color: #00f;
-                                font-weight: bold;
-                                text-decoration: underline;
-                        }
-                </style>
 
 
 		<title>Database Interface Test</title>
