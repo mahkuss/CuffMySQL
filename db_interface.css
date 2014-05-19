@@ -43,7 +43,7 @@ textarea {
 
 #sortedtable thead th {
     color: #FFFFCC;
-    background-color: #3333CC;
+    background-color: #660000;
     font-weight: bold;
     text-decoration: none;
 }
@@ -62,7 +62,8 @@ textarea {
 	width: 20%;
 	float: left;
 	padding-top: 30px;
-	background-color: #6666FF;
+	color: #FFFFCC;
+	background-color: #660000;
 	border: 2px solid black;
 }
 
