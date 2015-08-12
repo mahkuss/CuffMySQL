@@ -1,0 +1,8 @@
+SELECT gene_exp_diff.gene, genes_read_group.exp_condition, genes_read_group.replicate, genes_read_group.fpkm
+FROM gene_exp_diff, genes_read_group
+WHERE gene_exp_diff.gene_id = genes_read_group.tracking_id AND gene_exp_diff.q_value < 0.05;
+
+SELECT gene_exp_diff.gene, gene_exp_diff.sample_1, gene_exp_diff.sample_2, gene_exp_diff.value_1, gene_exp_diff.value_2, gene_exp_diff.q_value,
+genes_fpkm_tracking.WT_fpkm, genes_fpkm_tracking.WT_conf_hi, genes_fpkm_tracking.WT_conf_lo, genes_fpkm_tracking.Het_fpkm, genes_fpkm_tracking.Het_conf_hi, genes_fpkm_tracking.Het_conf_lo
+FROM gene_exp_diff, genes_fpkm_tracking
+WHERE gene_exp_diff.gene_id = genes_fpkm_tracking.gene_id AND gene_exp_diff.q_value < 0.05;
